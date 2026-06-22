@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+/* ================= VIBRANT FOOTER STYLE ================= */
+.main-footer {
+    background-color: #0d0f12; /* ปรับพื้นหลังเป็นสีดำสเปซ เพื่อให้สีนีออนเด่นที่สุด */
+    color: #ffffff;
+    padding: 70px 0 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ลูกเล่นเส้นขอบบนแบบไล่สีสะท้อนแสง (Multi-color Neon Gradient) */
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #39ff14, #ff007f, #ffaa00, #00e5ff);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1.2fr;
+    gap: 50px;
+}
+
+/* --- หัวข้อคอลัมน์แบบแยกสีสันสดใส --- */
+.footer-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ใส่สีเฉพาะให้แต่ละหัวข้อ */
+.header-neon-green { color: #39ff14; text-shadow: 0 0 10px rgba(57, 255, 20, 0.3); }
+.header-neon-green::after { background-color: #39ff14; }
+
+.header-neon-orange { color: #ffaa00; text-shadow: 0 0 10px rgba(255, 170, 0, 0.3); }
+.header-neon-orange::after { background-color: #ffaa00; }
+
+.header-neon-pink { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.3); }
+.header-neon-pink::after { background-color: #ff007f; }
+
+/* ลูกเล่นขยายเส้นใต้เมื่อมีเมาส์มาวางในคอลัมน์ */
+.footer-column:hover .footer-heading::after {
+    width: 65px;
+}
+
+/* --- คอลัมน์ที่ 1: เกี่ยวกับเรา --- */
+.about-widget p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.footer-badge {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.2), rgba(0, 229, 255, 0.2));
+    color: #39ff14;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.1);
+}
+
+/* --- คอลัมน์ที่ 2: เมนูเว็บไซต์ (Vibrant Hover) --- */
+.links-widget ul {
+    list-style: none;
+}
+
+.links-widget ul li {
+    margin-bottom: 14px;
+}
+
+.links-widget ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.links-widget ul li a i {
+    font-size: 0.75rem;
+    margin-right: 10px;
+    color: #ffaa00;
+    transition: transform 0.3s ease;
+}
+
+/* >>> EFFECT HOVER เมนูสีส้มสะท้อนแสง <<< */
+.links-widget ul li a:hover {
+    color: #ffaa00;
+    text-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+    padding-left: 10px;
+}
+
+.links-widget ul li a:hover i {
+    transform: scale(1.3) rotate(15deg);
+}
+
+/* --- คอลัมน์ที่ 3: ช่องทางการติดต่อ --- */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.icon-pink { color: #ff007f !important; }
+
+.contact-info li i {
+    margin-right: 12px;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.contact-info li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info li a:hover {
+    color: #ff007f;
+}
+
+/* ปุ่ม Social Media แบบเรืองแสง (Glow Effect) */
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #1e222b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px; /* ทรงเหลี่ยมโค้งโมเดิร์น */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+    transform: translateY(-6px) scale(1.1);
+    color: #fff;
+}
+
+.social-icon.fb:hover { background-color: #1877f2; box-shadow: 0 0 20px rgba(24, 119, 242, 0.6); }
+.social-icon.line:hover { background-color: #06c755; box-shadow: 0 0 20px rgba(6, 199, 85, 0.6); }
+.social-icon.yt:hover { background-color: #ff0000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+
+/* --- แถบลิขสิทธิ์และชื่อ นายธิติ แซ่จิว (Footer Bottom) --- */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #1e222b;
+    padding-top: 25px;
+}
+
+.bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #64748b;
+    font-size: 0.88rem;
+}
+
+/* จุดไฮไลต์: ตกแต่งชื่อ นายธิติ แซ่จิว ให้สวยงามสมบูรณ์แบบ */
+.developer-credit {
+    font-weight: 400;
+}
+
+.designer-name {
+    background: linear-gradient(45deg, #39ff14, #00e5ff, #ff007f);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    display: inline-block;
+    animation: shineGradient 4s linear infinite; /* เอฟเฟกต์สีวิ่ง */
+    text-transform: uppercase;
+}
+
+/* แอนิเมชันให้สีวิ่งบนชื่อ */
+@keyframes shineGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* ================= RESPONSIVE (รองรับมือถือ) ================= */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .about-widget {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .about-widget {
+        grid-column: span 1;
+    }
+    
+    .footer-heading {
+        margin-bottom: 18px;
+    }
+}
